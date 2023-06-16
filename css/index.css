@@ -5,6 +5,14 @@ body {
   font-family: "Inter", "sans";
 }
 
+a:focus:not(:focus-visible), button:focus:not(:focus-visible), input:focus:not(:focus-visible) {
+  outline: none;
+}
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 1.5px solid #A8BACA;
+  outline-offset: 2px;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
@@ -28,10 +36,49 @@ table {
   border-spacing: 0;
 }
 
+.btn {
+  cursor: pointer;
+  border: 3px solid #FCB076;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  /*&.btn-primary:visited{
+      color: $clr-primary-300;
+      background-color: $clr-tertiary-100;
+      border: 2px solid $clr-tertiary-100;
+
+  }*/
+  /*
+
+  &.btn-primary:active, &.btn-primary:focus{
+      color: $clr-primary-300;
+      background-color: $clr-tertiary-200;
+      border: 3px solid $clr-tertiary-200;
+      outline: none;
+
+  }*/
+}
+.btn.btn-primary {
+  color: #2D3250;
+  background-color: #FCB076;
+  border: 3px solid #FCB076;
+}
+.btn.btn-primary:hover {
+  color: #FCB076;
+  background-color: transparent;
+  border: 3px solid #FCB076;
+}
+.btn.btn-primary:active {
+  color: #2D3250;
+  background-color: #BF8354;
+  border: 3px solid #BF8354;
+}
+
 .header {
   text-align: center;
-  color: white;
-  font-family: "Inter", "sans";
+  padding: 2rem 0;
 }
 
 /*# sourceMappingURL=index.css.map */

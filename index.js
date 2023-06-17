@@ -1,8 +1,8 @@
-const username = document.getElementById('username'); //mojombo
-const searchBtn = document.getElementById('search');
+const username = document.getElementById('username'); //finds element*(input) by id  in this case username
+const searchBtn = document.getElementById('search'); //finds element*(button) by id  in this case search
 
 
-//arrowfunction / ES6
+//arrowfunction - ES6 
 const getUser = async (username) => {
     try{
     const url =  `https://api.github.com/users/${username}`;
@@ -24,7 +24,7 @@ const onSearch = () => {
 
     if (username.value === ''){
         console.log('please enter username');
-        errorUsername.insertAdjacentHTML("afterend",'Please enter username');
+        errorUsername.insertAdjacentHTML("beforeend",'Please enter username');
     }else {
 
         

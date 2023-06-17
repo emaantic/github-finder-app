@@ -1,6 +1,6 @@
 const username = document.getElementById('username'); //finds element*(input) by id  in this case username
 const searchBtn = document.getElementById('search'); //finds element*(button) by id  in this case search
-
+const errorUsername = document.getElementById('error');
 
 //arrowfunction - ES6 
 const getUser = async (username) => {
@@ -8,6 +8,7 @@ const getUser = async (username) => {
     const url =  `https://api.github.com/users/${username}`;
     console.log(url);
     const response = await (await (fetch (url))).json();
+
 
     }catch (err) {
     
@@ -18,7 +19,7 @@ const getUser = async (username) => {
 
 const onSearch = () => {
     console.log('Button clicked');
-    const errorUsername = document.getElementById('error');
+    
     errorUsername.innerHTML = '';
     
 
@@ -30,7 +31,7 @@ const onSearch = () => {
         
 
         //to do fetch user
-        console.log(username.value)
+        console.log(username.value);
         getUser(username.value);
 
     }

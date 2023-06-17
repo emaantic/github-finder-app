@@ -9,13 +9,13 @@ const getUser = async (username) => {
     console.log(url);
     const response = await (await (fetch (url))).json();
 
-}catch (err) {
+    }catch (err) {
     
-    console.log(err.toString());
-    errorUsername.innerHTML = 'Something is wrong';
+    console.log(err.toString()); 
+    errorUsername.insertAdjacentHTML("beforeend",'Something is wrong'); 
+    }
+}
 
-}
-}
 const onSearch = () => {
     console.log('Button clicked');
     const errorUsername = document.getElementById('error');
@@ -36,4 +36,4 @@ const onSearch = () => {
     }
 }
 
-searchBtn.addEventListener('click',onSearch);
+searchBtn.addEventListener('click',onSearch); // add event listener for click event on search button with a listener function that is going to be called

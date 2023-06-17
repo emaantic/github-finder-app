@@ -19,16 +19,19 @@ const getUser = async (username) => {
 const onSearch = () => {
     console.log('Button clicked');
     const errorUsername = document.getElementById('error');
-
+    errorUsername.innerHTML = '';
     
 
     if (username.value === ''){
         console.log('please enter username');
         errorUsername.insertAdjacentHTML("afterend",'Please enter username');
     }else {
-        errorUsername.innerHTML = '';
+
+        
 
         //to do fetch user
+        console.log(username.value)
+        getUser(username.value);
 
     }
 }

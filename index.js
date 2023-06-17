@@ -11,7 +11,7 @@ const getUser = (username) => {
 const onSearch = () => {
     console.log('Button clicked');
     const errorUsername = document.getElementById('error');
-    document.location.reload();
+    
 
     if (username.value === ''){
         console.log('please enter username');

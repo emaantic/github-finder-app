@@ -5,7 +5,7 @@ const searchBtn = document.getElementById('search');
 //arrowfunction / ES6
 const getUser = async (username) => {
     try{
-    const url =  'https://api.github.com/users/${username}';
+    const url =  `https://api.github.com/users/${username}`;
     console.log(url);
     const response = await (await (fetch (url))).json();
 
@@ -19,13 +19,15 @@ const getUser = async (username) => {
 const onSearch = () => {
     console.log('Button clicked');
     const errorUsername = document.getElementById('error');
+
     
 
     if (username.value === ''){
         console.log('please enter username');
         errorUsername.insertAdjacentHTML("afterend",'Please enter username');
     }else {
-        
+        errorUsername.innerHTML = '';
+
         //to do fetch user
 
     }

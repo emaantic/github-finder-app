@@ -1,2 +1,55 @@
-//margin and padding
+@use '../abstracts/variables' as *;
 
+// .m {
+//     &t-1 {
+//         margin-top: $space-1;
+//     }
+//     &t-2 {
+//         margin-top: $space-2;
+//     }
+//     &t-3 {
+//         margin-top: $space-3;
+//     }
+//     &t-4 {
+//         margin-top: $space-4;
+//     }
+//     &t-5 {
+//         margin-top: $space-5;
+//     }
+//     &t-6 {
+//         margin-top: $space-6;
+//     }
+// }
+$sizes: 0, $size-1, $size-2, $size-3, $size-4, $size-5, $size-6;
+//       1      2      3         4         5        6          7
+@each $size in $sizes {
+    //0.123rem
+    @debug "Space value: #{$size}";
+    //.m-0.123rem
+    //m-1
+    $i: index($sizes, $size) - 1; //idex je jedan treba mi nula
+    @debug "Index value: #{$i}";
+    .m-#{$i} {
+        margin: $size; //margin:  0.5rem
+    }
+    .mt-#{$i} {
+        margin-top: $size; 
+    }
+    .mb-#{$i} {
+        margin-bottom: $size; 
+    }
+    .ml-#{$i} {
+        margin-left: $size; 
+    }
+    .mr-#{$i} {
+        margin-right: $size; 
+    }
+    .mx-#{$i} {
+        margin-left: $size; 
+        margin-right: $size; 
+    }
+    .my-#{$i} {
+        margin-top: $size; 
+        margin-bottom: $size; 
+    }
+}

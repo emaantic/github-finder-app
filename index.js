@@ -5,16 +5,22 @@ const errorUsername = document.getElementById('error');
 //arrowfunction - ES6 
 const getUser = async (username) => {
     try{
-    const url =  `https://api.github.com/users/${username}`;
+    const url =  `https://api.gitub.com/users/${username}`;
     console.log(url);
     const response = await (await (fetch (url))).json();
+    if (response.message === 'Not Found'){
+        console.log(err.toString()); 
+        errorUsername.insertAdjacentHTML("beforeend",'Invalid username');
 
+    }
 
     }catch (err) {
-    
+
+        
     console.log(err.toString()); 
-    errorUsername.insertAdjacentHTML("beforeend",'Something is wrong'); 
-    }
+    errorUsername.innerHTML = 'Something is wrong';
+    
+    } 
 }
 
 const onSearch = () => {

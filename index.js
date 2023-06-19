@@ -112,9 +112,9 @@ const getUser = async (username) => {
                         <img src="./icon/🦆 icon _building_.svg" alt="" width="16px" height="20px"> 
                         <p>${company}</p> 
                     </div>  
-                    <div class="d-flex col">
-                        <div class="d-flex row">
-                            <div>
+                    <div class="d-flex col ">
+                        <div class="d-flex row gap-4 ">
+                            <div class="d-flex row gap-4 justify-content">
                                     <div class="d-flex align-center gap-2">
                                         <img src="./icon/🦆 icon _id_.svg " alt="" width="16px" height="20px"> 
                                         <p>${bio}</p>

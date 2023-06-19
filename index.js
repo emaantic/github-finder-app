@@ -72,14 +72,72 @@ const getUser = async (username) => {
         const card= `
             <h2>Results:</h2>
             <article class="card">
-                <div>
-                    
-                    <img class="avatar" src="https://github.com/${username}.png">
+                <div class="d-flex gap-4">
                     <div>
-                    <img src="./github-finder-app/Icons/🦆 icon _clock_.png" alt="">
-                    <p>Joined ${day}. ${month} ${year}</p>    
+                        <img class="avatar" src="https://github.com/${username}.png">
                     </div>
-                </div>                
+                    <div>                                                
+                        <div class="d-flex align-center gap-2">
+                            
+                                <img src="./icon/🦆 icon _clock_.svg" alt="" width="16px" height="16px">                            
+                                <p>Joined ${day}. ${month} ${year}</p> 
+                             
+                        </div>
+                        <div>
+                            <p>${name}</p>    
+                        </div>    
+                        <div>
+                            <p>${username}</p>    
+                        </div>
+                                            
+                    </div>
+                </div> 
+                <div class="inner-card d-flex row gap-11 ">  
+                    <div>
+                        <p>${repositories}</p> 
+                        <p>Repositories</p>     
+                    </div>  
+                    <div>
+                        <p>${followers}</p>
+                        <p>Followers</p>     
+                    </div> 
+                    <div>
+                        <p>${following}</p>   
+                        <p>Following</p>     
+ 
+                    </div> 
+
+                </div>
+                    <div class="d-flex align-center gap-2">
+                        <img src="./icon/🦆 icon _building_.svg" alt="" width="16px" height="20px"> 
+                        <p>${company}</p> 
+                    </div>  
+                    <div class="d-flex col">
+                        <div class="d-flex row">
+                            <div>
+                                    <div class="d-flex align-center gap-2">
+                                        <img src="./icon/🦆 icon _id_.svg " alt="" width="16px" height="20px"> 
+                                        <p>${bio}</p>
+                                    </div>
+                                    <div class="d-flex align-center gap-2">
+                                        <img src="./icon/🦆 icon _email_.svg" alt="" width="20px" height="14px"> 
+                                        <p>${email}</p>
+                                    </div>  
+                            </div>
+                            <div>
+                                    <div class="d-flex align-center gap-2">
+                                        <img src="./icon/🦆 icon _location pin_.svg " alt="" width="16px" height="20px"> 
+                                        <p>${location}</p>
+                                    </div>
+                                    <div class="d-flex align-center gap-2">
+                                        <img src="./icon/🦆 icon _link_.svg" alt="" width="20px" height="14px"> 
+                                        <p>${blog}</p>
+                                    </div>  
+                            </div>
+                        </div>
+                    </div>
+                <div>
+                </div>             
             </article>
         
         `

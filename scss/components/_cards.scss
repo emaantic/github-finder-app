@@ -7,3 +7,11 @@
     box-shadow: $card-box-shadow;
 
 }
+
+.inner-card{
+    background-color: $inner-card-bg-clr;
+    border-radius: $inner-card-border-radius;
+    padding: $card-padding;
+
+}
+

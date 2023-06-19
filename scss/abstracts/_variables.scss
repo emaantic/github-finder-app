@@ -29,6 +29,10 @@ $card-bg-clr: $clr-primary-300;
 $card-padding: $size-8 $size-10;
 $card-box-shadow: $box-shadow-2;
 
+//inner-card
+$inner-card-border-radius: $border-radius-1;
+$inner-card-bg-clr: $clr-primary-200;
+$inner-card-padding: $size-8 $size-10;
 
 //button
 $btn-font-size: $size-4;
@@ -49,5 +53,5 @@ $input-padding: $size-2 $size-2;
 //header
 
 $site-header-alignment: center;
-$site-header-padding: $size-8 0;
+$site-header-padding: $size-4 0;
 

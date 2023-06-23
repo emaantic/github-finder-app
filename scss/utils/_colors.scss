@@ -1,25 +1,22 @@
 @use '../abstracts/' as *;
 
-.text-color{
+.text-color {
     color: $clr-secondary-100;
-
 }
 
 
-.text-muted{
-
+.text-muted {
     color: $clr-secondary-200;
 }
 
-.text-danger{
+.text-danger {
     color: $red;
 }
 
-.text-success{
+.text-success {
     color: $green;
 }
 
-bg-primary{
-
+.bg-primary {
     background-color: $clr-primary-500;
 }

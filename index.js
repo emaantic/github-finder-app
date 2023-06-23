@@ -11,8 +11,6 @@ const numberToMonth = (number) => {
 
     if(number >=1 && number<=12){
         return calendar[number - 1];
-    }else{
-        return 'Invalid month';
     }
 
 }
@@ -28,43 +26,43 @@ const getUser = async (username) => {
         errorUsername.insertAdjacentHTML("beforeend",'Invalid username');
 
         }else {
-        console.log(response)
-        console.log(response.created_at)
-        
-        //ternarni operator
-        const name = response.name ? response.name: "Not Provided";
-        
-         /*
-        if(response.name){
-            name = response.name;
-        }else{
-            name = 'Not provided';
-        }*/ 
-        
-        const username = response.login;
-        //const date_created = response.created_at;
-        const repositories = response.public_repos;
-        const followers = response.followers;
-        const following = response.following;
-        const company = response.company ? response.company : "Not Provided";
-        const bio = response.bio ? response.bio : "No Bio";
-        const email = response.email ? response.email : "No Email";
-        const location = response.location ? response.location : "No Location";
-        const blog = response.blog ? response.blog : "No blog";
+            console.log(response)
+            console.log(response.created_at)
+            
+            //ternarni operator
+            const name = response.name ? response.name: "Not Provided";
+            
+            /*
+            if(response.name){
+                name = response.name;
+            }else{
+                name = 'Not provided';
+            }*/ 
+            
+            const username = response.login;
+            //const date_created = response.created_at;
+            const repositories = response.public_repos ? response.followers : 0;
+            const followers = response.followers ? response.followers : 0;
+            const following = response.following ? response.following : 0;
+            const company = response.company ? response.company : "Not Provided";
+            const bio = response.bio ? response.bio : "No Bio";
+            const email = response.email ? response.email : "No Email";
+            const location = response.location ? response.location : "No Location";
+            const blog = response.blog ? response.blog : "No blog";
 
-        //date
-        //split function at ['T']
+            //date
+            //split function at ['T']
 
-        const date_created = response.created_at.split('T')[0];
-        //takes first element of array which is year-month-day
+            const date_created = response.created_at.split('T')[0];
+            //takes first element of array which is year-month-day
 
-        console.log(date_created)
+            console.log(date_created)
 
-        const year=date_created.split('-')[0];
-        let month=date_created.split('-')[1];
-        const day=date_created.split('-')[2];
+            const year = date_created.split('-')[0];
+            let month = date_created.split('-')[1];
+            const day = date_created.split('-')[2];
 
-        month=numberToMonth(Number(month));
+            month = numberToMonth(Number(month));
 
        
         //showing the data
@@ -141,7 +139,8 @@ const getUser = async (username) => {
             </article>
         
         `
-        results.innerHTML = card;
+        //results.innerHTML = card;
+        results.insertAdjacentHTML("beforeend", card);
         }
 
     }catch (err) {

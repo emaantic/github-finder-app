@@ -23,30 +23,8 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 
 .wrapper {
-  max-width: 580px;
+  max-width: 640px;
   margin: 0 auto;
-}
-
-.d-flex {
-  display: flex;
-}
-.d-flex.row {
-  flex-direction: row;
-}
-.d-flex.col {
-  flex-direction: column;
-}
-
-.align-center {
-  align-items: center;
-}
-
-.flex-grow-1 {
-  flex-grow: 1;
-}
-
-.justify-content {
-  justify-content: space-between;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -631,6 +609,28 @@ input[type=text] {
 
 .g-6 {
   gap: 1.5rem;
+}
+
+.d-flex {
+  display: flex;
+}
+.d-flex.row {
+  flex-direction: row;
+}
+.d-flex.col {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.justify-content-between {
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=index.css.map */

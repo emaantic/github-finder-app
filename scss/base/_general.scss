@@ -20,28 +20,7 @@ a, button, input {
   }
 
 .wrapper {
-    max-width: 580px;
+    max-width: 640px;
     margin: 0 auto;
 }
 
-.d-flex {
-  display: flex;
-  &.row {
-      flex-direction: row;
-  }
-  &.col{
-      flex-direction: column;
-  }
-}
-
-
-.align-center{
-  align-items: center;
-}
-
-.flex-grow-1{
-  flex-grow: 1;
-}
-.justify-content{
-  justify-content: space-between;
-}

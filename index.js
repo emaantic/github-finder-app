@@ -64,7 +64,7 @@ const getUser = async (username) => {
 							</div>                                            
 						</div>	
 					</div>
-					<div class="inner-card d-flex row g-11 ">  
+					<div class="inner-card d-flex row justify-content-between">  
 							<div>
 									<p>${repositories}</p> 
 									<p>Repositories</p>     
@@ -78,7 +78,7 @@ const getUser = async (username) => {
 									<p>Following</p>      
 							</div> 
 					</div>
-					<div class="d-flex">
+					<div class="d-flex align-center g-3">
 							<img src="./icon/icon_building.svg" alt="" width="16" height="20"> 
 							<p>${company}</p> 
 					</div>
@@ -86,7 +86,7 @@ const getUser = async (username) => {
 						<div style="width: 50%">
 							<div class="d-flex align-center g-3">
 								<img src="./icon/icon_id.svg " alt="" width="16" height="20"> 
-								<p>${bio}</p>
+								<p class=${bio === 'No Bio' ? '"text-muted"' : '""'}>${bio}</p>
 							</div>
 							<div class="d-flex align-center g-3">
 								<img src="./icon/icon_email.svg" alt="" width="20" height="14"> 
